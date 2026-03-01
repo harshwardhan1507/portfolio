@@ -1,82 +1,59 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import GitHubStats from './components/GitHubStats';
+import RepoList from './components/RepoList';
+import ContributionGraph from './components/ContributionGraph';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-export default function Home() {
-  const [repos, setRepos] = useState<any[]>([]);
+function BackToTop() {
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/Haruto-x-Okura/repos")
-      .then((res) => res.json())
-      .then((data) => setRepos(data.slice(0, 4)));
+    const toggleVisibility = () => {
+      setVisible(window.scrollY > 500);
+    };
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  if (!visible) return null;
+
   return (
-    <main className="bg-black text-white min-h-screen scroll-smooth">
-      {/* Hero */}
-      <section className="h-screen flex flex-col justify-center items-center text-center px-6">
-        <h1 className="text-5xl font-bold mb-4">Hi, I'm Haruto 👋</h1>
-        <p className="text-gray-400 max-w-xl">
-          Web Developer | Java | Python | React Enthusiast
-        </p>
-        <a
-          href="#projects"
-          className="mt-6 px-6 py-3 bg-white text-black rounded-full hover:scale-105 transition"
-        >
-          View My Work
-        </a>
-      </section>
+    <button
+      onClick={scrollToTop}
+      className="back-to-top"
+      aria-label="Back to top"
+    >
+      <svg className="w-6 h-6 text-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+      </svg>
+    </button>
+  );
+}
 
-      {/* About */}
-      <section className="py-20 px-6 bg-zinc-900 text-center">
-        <h2 className="text-3xl font-semibold mb-6">About Me</h2>
-        <p className="max-w-2xl mx-auto text-gray-400">
-          I'm a developer passionate about building clean and efficient
-          applications. I enjoy solving problems and creating user-friendly
-          digital experiences.
-        </p>
-      </section>
-
-      {/* Projects */}
-      <section id="projects" className="py-20 px-6">
-        <h2 className="text-3xl font-semibold text-center mb-12">
-          GitHub Projects
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {repos.map((repo) => (
-            <div
-              key={repo.id}
-              className="bg-zinc-900 p-6 rounded-xl hover:scale-105 transition"
-            >
-              <h3 className="text-xl font-bold">{repo.name}</h3>
-              <p className="text-gray-400 text-sm mt-2">
-                {repo.description || "No description available."}
-              </p>
-              <a
-                href={repo.html_url}
-                target="_blank"
-                className="inline-block mt-4 text-blue-400 hover:underline"
-              >
-                View Repo →
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section className="py-20 px-6 bg-zinc-900 text-center">
-        <h2 className="text-3xl font-semibold mb-6">Contact</h2>
-        <p className="text-gray-400">
-          Email: yourmail@example.com
-        </p>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-6 text-center text-gray-600 text-sm">
-        © {new Date().getFullYear()} Haruto. All rights reserved.
-      </footer>
+export default function Home() {
+  return (
+    <main className="relative">
+      <Navbar />
+      <Hero />
+      <GitHubStats />
+      <RepoList />
+      <ContributionGraph />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+      <BackToTop />
     </main>
   );
 }
