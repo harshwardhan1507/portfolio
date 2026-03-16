@@ -6,7 +6,7 @@ import Terminal from "./Terminal";
 export default function Hero() {
   return (
     <section
-      id="about"
+      id="home"
       className="min-h-screen flex items-center justify-center relative pt-20"
     >
       <div className="max-w-screen-1200 mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
