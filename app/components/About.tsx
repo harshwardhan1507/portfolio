@@ -112,7 +112,7 @@ export default function About() {
 
             {/* CTA card — spans full width */}
             <motion.a
-              href="/public/harsh_wardhan_resume.pdf"
+              href="/harsh_wardhan_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
