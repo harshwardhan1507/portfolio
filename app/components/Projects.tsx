@@ -28,6 +28,15 @@ const projects = [
     live: 'https://tempifybyharuto.netlify.app/',
     image: '/images/tempify.png',
   },
+  {
+    name: "MemoryOS",
+    description:
+      "A personal AI second brain — capture, categorize, and surface memories across 7 semantic dimensions. Built in 36 hours at a hackathon with a full auth + database stack.",
+    image: "/images/MemoryOS.png", // add a screenshot
+    tech: ["React", "TypeScript", "Supabase", "Firebase Auth", "Node.js", "Tailwind"],
+    github: "https://github.com/harshwardhan1507/verge",
+  live: "https://verge-eosin.vercel.app/",
+}
 ];
 
 export default function Projects() {
