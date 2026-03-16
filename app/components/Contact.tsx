@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -14,7 +15,7 @@ export default function Contact() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -49,19 +50,18 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 md:py-32 px-6">
       <div className="max-w-[700px] mx-auto">
-
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
+          viewport={{ once: true }}
+          className="text-center mb-12"
         >
-           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             <span className="text-gradient">{"<Contact/>"}</span>
           </h2>
           <p className="text-zinc-400">
-            Open to internships, collabs, and freelance work. I usually reply within 24 hours.
+            Open to internships, collabs, and freelance work. I usually reply
+            within 24 hours.
           </p>
         </motion.div>
 
@@ -76,7 +76,8 @@ export default function Contact() {
             href="mailto:harshwardhansingh1507@gmail.com"
             className="flex items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-blue-400 hover:text-blue-400 transition-colors text-sm font-mono"
           >
-            📧 harshwardhansingh1507@gmail.com
+            <Mail size={15} />
+            harshwardhansingh1507@gmail.com
           </a>
           <a
             href="https://linkedin.com/in/harsh-wardhan-singh-cse"
@@ -84,7 +85,8 @@ export default function Contact() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-blue-400 hover:text-blue-400 transition-colors text-sm font-mono"
           >
-            💼 LinkedIn
+            <Linkedin size={15} />
+            LinkedIn
           </a>
           <a
             href="https://github.com/harshwardhan1507"
@@ -92,7 +94,8 @@ export default function Contact() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-purple-400 hover:text-purple-400 transition-colors text-sm font-mono"
           >
-            🐙 GitHub
+            <Github size={15} />
+            GitHub
           </a>
         </motion.div>
 
@@ -111,7 +114,6 @@ export default function Contact() {
           </div>
 
           <div className="space-y-5">
-
             <div>
               <label className="text-green-400 text-sm block mb-1">
                 {`>`} name:
@@ -181,7 +183,6 @@ export default function Contact() {
                 ❌ Something went wrong. Email me directly instead.
               </motion.p>
             )}
-
           </div>
         </motion.div>
       </div>

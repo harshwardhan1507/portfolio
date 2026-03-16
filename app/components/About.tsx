@@ -2,14 +2,12 @@
 
 import { motion } from "framer-motion";
 
-
 const stats = [
   { label: "Projects Shipped", value: "10+" },
   { label: "Hackathons", value: "1" },
   { label: "GitHub Repos", value: "6+" },
   { label: "Cups of Coffee", value: "∞" }, // keeps it human
 ];
-
 
 const highlights = [
   "🎓 B.Tech CS @ SRM University",
@@ -23,21 +21,19 @@ export default function About() {
   return (
     <section id="about" className="py-24 md:py-32 px-6 bg-zinc-900/30">
       <div className="max-w-[1200px] mx-auto">
-
         {/* Section heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
         >
-         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             <span className="text-gradient">{"<About/>"}</span>
           </h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
-
           {/* Left — bio + highlights */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -49,25 +45,30 @@ export default function About() {
             {/* Bio card */}
             <div className="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-2xl border border-zinc-800">
               <p className="text-zinc-300 leading-relaxed mb-4">
-                Hey, I'm <span className="text-white font-semibold">Harsh Wardhan</span> — a 1st year CS student
-                at SRM University and a self-driven full-stack developer.
+                Hey, I'm{" "}
+                <span className="text-white font-semibold">Harsh Wardhan</span>{" "}
+                — a 1st year CS student at SRM University and a self-driven
+                full-stack developer.
               </p>
               <p className="text-zinc-400 leading-relaxed mb-4">
                 I build real products, not just tutorial clones. From{" "}
-                <span className="text-blue-400">MemoryOS</span> — an AI second brain built in 36 hours
-                at a hackathon — to tools used by my own college peers, I focus on shipping
-                things that actually work.
+                <span className="text-blue-400">MemoryOS</span> — an AI second
+                brain built in 36 hours at a hackathon — to tools used by my own
+                college peers, I focus on shipping things that actually work.
               </p>
               <p className="text-zinc-400 leading-relaxed">
-                Currently leveling up in <span className="text-purple-400">DSA (Java)</span> and
-                backend systems, with a goal to land a dev internship by 2nd year.
-                Open to internships, freelance, and anything interesting.
+                Currently leveling up in{" "}
+                <span className="text-purple-400">DSA (Java)</span> and backend
+                systems, with a goal to land a dev internship by 2nd year. Open
+                to internships, freelance, and anything interesting.
               </p>
             </div>
 
             {/* Quick highlights */}
             <div className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-2xl border border-zinc-800">
-              <p className="text-green-400 font-mono text-sm mb-4">&gt; ./highlights.sh</p>
+              <p className="text-green-400 font-mono text-sm mb-4">
+                &gt; ./highlights.sh
+              </p>
               <ul className="space-y-2">
                 {highlights.map((item, i) => (
                   <motion.li
@@ -126,10 +127,11 @@ export default function About() {
               <p className="text-white font-semibold group-hover:text-blue-300 transition-colors">
                 📄 View Resume
               </p>
-              <p className="text-zinc-500 text-xs mt-1">Open to internships & freelance</p>
+              <p className="text-zinc-500 text-xs mt-1">
+                Open to internships & freelance
+              </p>
             </motion.a>
           </motion.div>
-
         </div>
       </div>
     </section>
