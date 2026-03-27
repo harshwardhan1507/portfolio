@@ -19,7 +19,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32 px-6 bg-zinc-900/30">
+    <section id="about" className="py-24 md:py-32 px-4 sm:px-6 bg-black/50 backdrop-blur-sm">
       <div className="max-w-[1200px] mx-auto">
         {/* Section heading */}
         <motion.div
@@ -43,7 +43,7 @@ export default function About() {
             className="space-y-6"
           >
             {/* Bio card */}
-            <div className="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-2xl border border-zinc-800">
+            <div className="bg-zinc-900/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-zinc-800">
               <p className="text-zinc-300 leading-relaxed mb-4">
                 Hey, I'm{" "}
                 <span className="text-white font-semibold">Harsh Wardhan</span>{" "}
@@ -92,7 +92,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
           >
             {stats.map((stat, index) => (
               <motion.div

@@ -168,13 +168,13 @@ export default function ContributionGraph() {
   }, []);
 
   return (
-    <section className="py-20">
-      <div className="max-w-screen-1200 mx-auto px-6">
+    <section className="py-20 bg-black/50 backdrop-blur-sm">
+      <div className="max-w-screen-1200 mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card p-8"
+          className="glass-card p-5 sm:p-8"
         >
           <h2 className="text-2xl font-bold text-white mb-2">
             Harsh Wardhan's Contribution Graph
@@ -192,7 +192,7 @@ export default function ContributionGraph() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="grid grid-cols-3 gap-6 mt-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6"
         >
           <div className="glass-card p-6 text-center">
             <div className="text-3xl font-bold text-neon-blue mb-2">{totalContributions}</div>

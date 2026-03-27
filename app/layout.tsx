@@ -1,10 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
 
-// Import the Particles component for the animated background
-import Particles from './components/Particles';
 // Import ClickSpark for interactive click effects
 import ClickSpark from './components/ClickSpark';
+import HyperspeedBackground from '../components/Hyperspeed/HyperspeedBackground';
 
 export const metadata: Metadata = {
   title: 'Harsh Wardhan| Full-Stack & AI Engineer',
@@ -22,29 +21,8 @@ export default function RootLayout({
         Main body with background color fallback.
         The Particles component will render the animated background.
       */}
-      <body className="bg-bg-primary text-white antialiased">
-        {/* 
-          ========================================
-          ANIMATED PARTICLES BACKGROUND
-          ========================================
-          Replaces the previous CSS-based background effects 
-          (grid overlay, radial blobs, light streaks) with an 
-          interactive WebGL particle animation.
-          
-          Props:
-          - particleCount: Number of particles (200 default)
-          - speed: Animation speed (0.1 default)
-          - particleColors: Array of colors for particles
-          - alphaParticles: Enable transparent particles
-          ========================================
-        */}
-        <Particles 
-          particleCount={300}
-          speed={0.15}
-          particleColors={['#57f0ff', '#8b5cf6', '#ffffff']}
-          alphaParticles={true}
-          particleBaseSize={120}
-        />
+      <body className="bg-black text-white antialiased">
+        <HyperspeedBackground />
         
         {/* 
           ========================================
@@ -58,7 +36,7 @@ export default function RootLayout({
         */}
         
         <ClickSpark 
-          sparkColor="#57f0ff"
+          sparkColor="#ff2a2a"
           sparkCount={8}
           sparkSize={10}
           sparkRadius={15}

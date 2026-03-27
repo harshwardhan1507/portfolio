@@ -48,7 +48,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 px-6">
+    <section id="contact" className="py-24 md:py-32 px-4 sm:px-6 bg-black/50 backdrop-blur-sm">
       <div className="max-w-[700px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ export default function Contact() {
         >
           <a
             href="mailto:harshwardhansingh1507@gmail.com"
-            className="flex items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-blue-400 hover:text-blue-400 transition-colors text-sm font-mono"
+            className="flex w-full sm:w-auto items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-blue-400 hover:text-blue-400 transition-colors text-sm font-mono break-all"
           >
             <Mail size={15} />
             harshwardhansingh1507@gmail.com
@@ -83,7 +83,7 @@ export default function Contact() {
             href="https://linkedin.com/in/harsh-wardhan-singh-cse"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-blue-400 hover:text-blue-400 transition-colors text-sm font-mono"
+            className="flex w-full sm:w-auto items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-blue-400 hover:text-blue-400 transition-colors text-sm font-mono"
           >
             <Linkedin size={15} />
             LinkedIn
@@ -92,7 +92,7 @@ export default function Contact() {
             href="https://github.com/harshwardhan1507"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-purple-400 hover:text-purple-400 transition-colors text-sm font-mono"
+            className="flex w-full sm:w-auto items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-purple-400 hover:text-purple-400 transition-colors text-sm font-mono"
           >
             <Github size={15} />
             GitHub

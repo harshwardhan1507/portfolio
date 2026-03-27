@@ -15,6 +15,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';           // ← added
+import Achievements from './components/Achievements';
 import GitHubStats from './components/GitHubStats';
 import RepoList from './components/RepoList';
 import ContributionGraph from './components/ContributionGraph';
@@ -55,10 +56,11 @@ function BackToTop() {
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />              {/* ← added */}
+      <Achievements />
       <GitHubStats />
       <RepoList />
       <ContributionGraph />

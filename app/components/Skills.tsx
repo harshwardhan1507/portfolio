@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from "next/image";
 
 const skills = [
   { name: 'HTML', icon: <img src="/icons/html5.svg" className='invert' alt="HTML" width="40" /> },
@@ -21,8 +20,8 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20">
-      <div className="max-w-screen-1200 mx-auto px-6">
+    <section id="skills" className="py-20 bg-black/50 backdrop-blur-sm">
+      <div className="max-w-screen-1200 mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +34,7 @@ export default function Skills() {
           <p className="text-xl text-gray-400 font-mono">SYSTEM.LOAD_TECHNOLOGIES()</p>
         </motion.div>
 
-        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-7 gap-4">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}

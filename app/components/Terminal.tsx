@@ -8,13 +8,15 @@ interface TerminalLine {
   content: string;
 }
 
+type CommandHandler = string | (() => string | void);
+
 interface TerminalProps {
   mode?: 'main' | 'project';
   projectUrl?: string;
   githubUrl?: string;
 }
 
-const MAIN_COMMANDS: Record<string, string | (() => void)> = {
+const MAIN_COMMANDS: Record<string, CommandHandler> = {
   help: 'Available commands:\n  help     - Show this help message\n  about    - Navigate to About section\n  skills   - Navigate to Skills section\n  github   - Navigate to GitHub section\n  projects - Navigate to Projects section\n  contact  - Navigate to Contact section\n  whoami   - Display user info\n  ls       - List available sections\n  clear    - Clear terminal\n\nType any command to execute.',
   
   about: () => {
@@ -66,7 +68,7 @@ export default function Terminal({ mode = 'main', projectUrl, githubUrl }: Termi
   const terminalRef = useRef<HTMLDivElement>(null);
   const typingRef = useRef<NodeJS.Timeout | null>(null);
 
-  const commands = mode === 'project' ? {
+  const commands: Record<string, CommandHandler> = mode === 'project' ? {
     help: 'Available commands:\n  help   - Show this help message\n  live   - Open live demo\n  github - Open GitHub repository',
     
     live: () => {
@@ -174,9 +176,15 @@ export default function Terminal({ mode = 'main', projectUrl, githubUrl }: Termi
 
     if (command) {
       if (typeof command === 'function') {
-        command();
+        const result = command();
         setTimeout(() => {
-          setLines(prev => [...prev, { type: 'success', content: 'Command executed successfully.' }]);
+          setLines(prev => [
+            ...prev,
+            {
+              type: 'success',
+              content: typeof result === 'string' ? result : 'Command executed successfully.',
+            },
+          ]);
         }, 100);
       } else {
         setTimeout(() => {
@@ -191,10 +199,7 @@ export default function Terminal({ mode = 'main', projectUrl, githubUrl }: Termi
   }, [commands]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !isTyping) {
-      executeCommand(input);
-      setInput('');
-    } else if (e.key === 'ArrowUp') {
+    if (e.key === 'ArrowUp') {
       e.preventDefault();
       if (history.length > 0) {
         const newIndex = historyIndex < history.length - 1 ? historyIndex + 1 : historyIndex;
@@ -215,6 +220,14 @@ export default function Terminal({ mode = 'main', projectUrl, githubUrl }: Termi
   };
 
   const handleContainerClick = () => {
+    inputRef.current?.focus();
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isTyping) return;
+    executeCommand(input);
+    setInput('');
     inputRef.current?.focus();
   };
 
@@ -241,7 +254,7 @@ export default function Terminal({ mode = 'main', projectUrl, githubUrl }: Termi
       {/* Terminal Content */}
       <div
         ref={terminalRef}
-        className="terminal-content h-80 overflow-y-auto scrollbar-thin"
+        className="terminal-content h-72 md:h-80 overflow-y-auto overflow-x-hidden scrollbar-thin"
       >
         {lines.map((line, index) => (
           <div key={index} className="mb-1 whitespace-pre-wrap">
@@ -261,7 +274,7 @@ export default function Terminal({ mode = 'main', projectUrl, githubUrl }: Termi
         ))}
 
         {/* Input Line */}
-        <div className="flex items-center">
+        <form onSubmit={handleSubmit} className="flex items-center">
           <span className="text-neon-blue mr-2">{'>'}</span>
           <input
             ref={inputRef}
@@ -270,15 +283,14 @@ export default function Terminal({ mode = 'main', projectUrl, githubUrl }: Termi
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
             disabled={isTyping}
-            className="flex-1 bg-transparent border-none outline-none text-neon-green font-mono caret-transparent"
-            autoFocus
+            className="flex-1 min-w-0 bg-transparent border-none outline-none text-neon-green font-mono caret-transparent"
             spellCheck={false}
             autoComplete="off"
           />
           {showCursor && !isTyping && (
             <span className="inline-block w-2.5 h-5 bg-neon-green animate-pulse" />
           )}
-        </div>
+        </form>
 
         {/* Hint for project mode */}
         {mode === 'project' && lines.length === 0 && (

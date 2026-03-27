@@ -70,8 +70,8 @@ export default function GitHubStats() {
   ];
 
   return (
-    <section id="github" className="py-20 relative">
-      <div className="max-w-screen-1200 mx-auto px-6">
+    <section id="github" className="py-20 relative bg-black/50 backdrop-blur-sm">
+      <div className="max-w-screen-1200 mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ export default function GitHubStats() {
           <p className="text-xl text-gray-400">Real-time GitHub metrics & activity logs</p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((stat, index) => (
             <StatCard
               key={stat.key}

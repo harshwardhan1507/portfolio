@@ -99,8 +99,8 @@ export default function RepoList() {
   }, [username]);
 
   return (
-    <section className="py-20">
-      <div className="max-w-screen-1200 mx-auto px-6">
+    <section className="py-20 bg-black/50 backdrop-blur-sm">
+      <div className="max-w-screen-1200 mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ export default function RepoList() {
         </motion.div>
 
         {loading ? (
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="glass-card p-6 animate-pulse">
                 <div className="h-6 bg-white/10 rounded w-3/4 mb-4"></div>
@@ -122,7 +122,7 @@ export default function RepoList() {
             ))}
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {repos.map((repo, index) => (
               <RepoCard key={repo.id} repo={repo} index={index} />
             ))}

@@ -7,9 +7,9 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative pt-20"
+      className="min-h-screen flex items-center justify-center relative pt-20 bg-black/50 backdrop-blur-sm"
     >
-      <div className="max-w-screen-1200 mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="w-full max-w-screen-1200 mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center overflow-hidden">
         {/* Left Side - Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -31,7 +31,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-4 leading-tight break-words">
             Hi, I'm <span className="text-gradient">Harsh Wardhan</span>
           </h1>
 
@@ -49,7 +49,7 @@ export default function Hero() {
             
           </div>
 
-          <div className="text-4xl md:text-6xl font-bold">
+          <div className="text-3xl sm:text-4xl md:text-6xl font-bold">
             <p className="text-white">Full-Stack</p>
             <p className="text-gray-400">& AI Engineer</p>
           </div>
@@ -59,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-xl text-gray-400 mb-8 max-w-lg"
+            className="text-lg sm:text-xl text-gray-400 mb-8 max-w-lg"
           >
             Building scalable systems and intelligent applications with modern
             technologies.
@@ -74,7 +74,7 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="px-8 py-3 rounded-lg bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold hover:shadow-[0_0_30px_rgba(87,240,255,0.4)] transition-all"
+              className="px-8 py-3 rounded-lg bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold hover:shadow-[0_0_30px_rgba(255,42,42,0.4)] transition-all"
             >
               View My Work
             </a>
@@ -88,7 +88,7 @@ export default function Hero() {
 
           {/* Animated Orbit Lines */}
           <svg
-            className="absolute -top-20 -left-20 w-96 h-96 opacity-20"
+            className="hidden sm:block absolute -top-20 -left-20 w-96 h-96 opacity-20"
             viewBox="0 0 400 400"
           >
             <circle
@@ -96,7 +96,7 @@ export default function Hero() {
               cy="200"
               r="150"
               fill="none"
-              stroke="rgba(87,240,255,0.3)"
+              stroke="rgba(255,42,42,0.3)"
               strokeWidth="1"
             >
               <animateTransform
