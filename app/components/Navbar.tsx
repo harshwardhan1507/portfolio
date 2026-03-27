@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="max-w-screen-1200 mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="/harsh_wardhan_resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3 group min-w-0">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center text-white font-bold text-lg group-hover:shadow-[0_0_20px_rgba(87,240,255,0.5)] transition-shadow">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-red to-neon-orange flex items-center justify-center text-white font-bold text-lg group-hover:shadow-[0_0_20px_rgba(255,16,42,0.5)] transition-shadow">
               HW
             </div>
             <span className="font-mono text-base sm:text-xl text-white truncate">{"<Harsh Wardhan/>"}</span>
@@ -46,7 +46,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="nav-link text-gray-300 hover:text-neon-blue transition-colors"
+                className="nav-link text-gray-300 hover:text-neon-red transition-colors"
               >
                 {link.name}
               </a>
@@ -75,7 +75,7 @@ export default function Navbar() {
             href="/harsh_wardhan_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex px-5 py-2 rounded-lg border border-white/20 text-white font-medium hover:bg-white/10 hover:border-neon-blue/50 hover:shadow-[0_0_20px_rgba(87,240,255,0.3)] transition-all"
+            className="hidden md:inline-flex px-5 py-2 rounded-lg border border-white/20 text-white font-medium hover:bg-white/10 hover:border-neon-red/50 hover:shadow-[0_0_20px_rgba(255,16,42,0.3)] transition-all"
           >
             Resume
           </a>
@@ -88,7 +88,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-gray-300 hover:text-neon-blue transition-colors"
+                className="block text-gray-300 hover:text-neon-red transition-colors"
               >
                 {link.name}
               </a>

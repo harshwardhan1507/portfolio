@@ -74,7 +74,7 @@ export default function Contact() {
         >
           <a
             href="mailto:harshwardhansingh1507@gmail.com"
-            className="flex w-full sm:w-auto items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-blue-400 hover:text-blue-400 transition-colors text-sm font-mono break-all"
+            className="flex w-full sm:w-auto items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-neon-red hover:text-neon-red transition-colors text-sm font-mono break-all"
           >
             <Mail size={15} />
             harshwardhansingh1507@gmail.com
@@ -83,7 +83,7 @@ export default function Contact() {
             href="https://linkedin.com/in/harsh-wardhan-singh-cse"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-full sm:w-auto items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-blue-400 hover:text-blue-400 transition-colors text-sm font-mono"
+            className="flex w-full sm:w-auto items-center gap-2 px-4 py-2 border border-zinc-700 rounded-lg text-zinc-300 hover:border-neon-red hover:text-neon-red transition-colors text-sm font-mono"
           >
             <Linkedin size={15} />
             LinkedIn
@@ -159,7 +159,7 @@ export default function Contact() {
             <button
               onClick={handleSubmit}
               disabled={formState === "loading"}
-              className="w-full py-3 rounded-lg font-semibold text-sm transition-all bg-blue-600 hover:bg-blue-500 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 rounded-lg font-semibold text-sm transition-all bg-neon-red hover:bg-neon-red/80 text-white disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {formState === "loading" ? "Sending..." : "$ send_message →"}
             </button>

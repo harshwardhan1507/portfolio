@@ -72,7 +72,7 @@ export default function Achievements() {
                 <span className="text-3xl leading-none">{achievement.icon}</span>
                 <div>
                   <h3 className="text-xl font-semibold text-white break-words">{achievement.title}</h3>
-                  <p className="text-sm text-neon-blue font-mono mt-1">{achievement.subtitle}</p>
+                  <p className="text-sm text-neon-orange font-mono mt-1">{achievement.subtitle}</p>
                 </div>
               </div>
 
@@ -93,7 +93,7 @@ export default function Achievements() {
                 <span className="text-3xl leading-none">{finalCard.icon}</span>
                 <div>
                   <h3 className="text-xl font-semibold text-white break-words">{finalCard.title}</h3>
-                  <p className="text-sm text-neon-blue font-mono mt-1">{finalCard.subtitle}</p>
+                  <p className="text-sm text-neon-orange font-mono mt-1">{finalCard.subtitle}</p>
                 </div>
               </div>
 

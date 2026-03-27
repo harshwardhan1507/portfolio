@@ -52,7 +52,7 @@ export default function About() {
               </p>
               <p className="text-zinc-400 leading-relaxed mb-4">
                 I build real products, not just tutorial clones. From{" "}
-                <span className="text-blue-400">MemoryOS</span> — an AI second
+                <span className="text-neon-orange">MemoryOS</span> — an AI second
                 brain built in 36 hours at a hackathon — to tools used by my own
                 college peers, I focus on shipping things that actually work.
               </p>
@@ -101,9 +101,9 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl text-center border border-zinc-800 hover:border-blue-500/50 transition-colors"
+                className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl text-center border border-zinc-800 hover:border-neon-red/50 transition-colors"
               >
-                <span className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="text-4xl font-bold bg-gradient-to-r from-neon-red to-neon-orange bg-clip-text text-transparent">
                   {stat.value}
                 </span>
                 <p className="text-zinc-500 text-sm mt-2">{stat.label}</p>
@@ -119,12 +119,12 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.8 }}
-              className="col-span-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 
-                         border border-blue-500/30 hover:border-blue-400 
+              className="col-span-2 bg-gradient-to-r from-neon-red/10 to-neon-orange/10 
+                         border border-neon-red/30 hover:border-neon-red 
                          p-5 rounded-xl text-center cursor-pointer transition-all
-                         hover:from-blue-500/20 hover:to-purple-500/20 group"
+                         hover:from-neon-red/20 hover:to-neon-orange/20 group"
             >
-              <p className="text-white font-semibold group-hover:text-blue-300 transition-colors">
+              <p className="text-white font-semibold group-hover:text-neon-orange transition-colors">
                 📄 View Resume
               </p>
               <p className="text-zinc-500 text-xs mt-1">

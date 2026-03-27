@@ -40,7 +40,7 @@ export default function Hero() {
             {/* Glow layer */}
             <div
               className="absolute inset-0 
-                  bg-blue-500/20 
+                  bg-neon-red/20 
                   blur-xl 
                   rounded-full"
             />
@@ -74,7 +74,7 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="px-8 py-3 rounded-lg bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold hover:shadow-[0_0_30px_rgba(255,42,42,0.4)] transition-all"
+              className="px-8 py-3 rounded-lg bg-gradient-to-r from-neon-red to-neon-orange text-white font-semibold hover:shadow-[0_0_30px_rgba(255,42,42,0.4)] transition-all"
             >
               View My Work
             </a>

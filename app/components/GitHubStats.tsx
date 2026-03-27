@@ -26,7 +26,7 @@ function StatCard({ icon, value, label, delay }: StatCardProps) {
       transition={{ duration: 0.5, delay }}
       className="glass-card glass-card-hover p-6 text-center"
     >
-      <div className="flex justify-center mb-4 text-neon-blue">{icon}</div>
+      <div className="flex justify-center mb-4 text-neon-red">{icon}</div>
       <div className="text-4xl font-bold text-white mb-2">{value}</div>
       <div className="flex items-center justify-center gap-2 text-gray-400">
         <span className="w-2 h-2 rounded-full bg-neon-green"></span>

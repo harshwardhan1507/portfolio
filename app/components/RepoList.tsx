@@ -50,7 +50,7 @@ function RepoCard({ repo, index }: { repo: Repository; index: number }) {
       className="glass-card glass-card-hover p-6 block group"
     >
       <div className="flex items-start justify-between mb-3">
-        <h3 className="text-lg font-semibold text-white group-hover:text-neon-blue transition-colors">
+        <h3 className="text-lg font-semibold text-white group-hover:text-neon-red transition-colors">
           {repo.name}
         </h3>
         {repo.stargazers_count > 0 && (

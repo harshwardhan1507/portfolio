@@ -17,8 +17,13 @@ interface TerminalProps {
 }
 
 const MAIN_COMMANDS: Record<string, CommandHandler> = {
-  help: 'Available commands:\n  help     - Show this help message\n  about    - Navigate to About section\n  skills   - Navigate to Skills section\n  github   - Navigate to GitHub section\n  projects - Navigate to Projects section\n  contact  - Navigate to Contact section\n  whoami   - Display user info\n  ls       - List available sections\n  clear    - Clear terminal\n\nType any command to execute.',
+  help: 'Available commands:\n  help         - Show this help message\n  about        - Navigate to About section\n  skills       - Navigate to Skills section\n  github       - Navigate to GitHub section\n  projects     - Navigate to Projects section\n  achievements - Navigate to Achievements section\n  contact      - Navigate to Contact section\n  whoami       - Display user info\n  ls           - List available sections\n  clear        - Clear terminal\n\nType any command to execute.',
   
+  achievements: () => {
+    document.getElementById('achievements')?.scrollIntoView({ behavior: 'smooth' });
+    return 'Navigating to achievements...';
+  },
+
   about: () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
     return 'Navigating to About section...';
@@ -51,7 +56,7 @@ const MAIN_COMMANDS: Record<string, CommandHandler> = {
   
   whoami: 'Harsh Wardhan -Full-stack developer experienced in designing and implementing scalable web systems with modern frontend and backend technologies.',
   
-  ls: 'Available sections:\n  about    - About me\n  skills   - Technical skills\n  projects - My projects\n  github   - GitHub stats\n  contact  - Get in touch',
+  ls: 'Available sections:\n  about        - About me\n  skills       - Technical skills\n  projects     - My projects\n  achievements - Achievements\n  github       - GitHub stats\n  contact      - Get in touch',
   
   clear: 'CLEAR',
 };
@@ -259,7 +264,7 @@ export default function Terminal({ mode = 'main', projectUrl, githubUrl }: Termi
         {lines.map((line, index) => (
           <div key={index} className="mb-1 whitespace-pre-wrap">
             {line.type === 'input' && (
-              <span className="text-neon-blue">{line.content}</span>
+              <span className="text-neon-red">{line.content}</span>
             )}
             {line.type === 'output' && (
               <span className="text-neon-green">{line.content}</span>
@@ -268,14 +273,14 @@ export default function Terminal({ mode = 'main', projectUrl, githubUrl }: Termi
               <span className="text-red-400">{line.content}</span>
             )}
             {line.type === 'success' && (
-              <span className="text-neon-purple">{line.content}</span>
+              <span className="text-neon-orange">{line.content}</span>
             )}
           </div>
         ))}
 
         {/* Input Line */}
         <form onSubmit={handleSubmit} className="flex items-center">
-          <span className="text-neon-blue mr-2">{'>'}</span>
+          <span className="text-neon-red mr-2">{'>'}</span>
           <input
             ref={inputRef}
             type="text"

@@ -7,8 +7,8 @@
 :root {
   --bg-primary: #0b0f14;
   --bg-secondary: #0d1117;
-  --accent-blue: #ff2a2a;
-  --accent-purple: #ff7b00;
+  --accent-red: #ff102a;
+  --accent-orange: #eb6a2e;
   --text-primary: #ffffff;
   --text-secondary: #94a3b8;
   --border-color: rgba(255, 255, 255, 0.1);
@@ -115,13 +115,13 @@ body {
 .radial-blob-1 {
   top: -200px;
   right: -200px;
-  background: var(--accent-blue);
+  background: var(--accent-red);
 }
 
 .radial-blob-2 {
   bottom: -200px;
   left: -200px;
-  background: var(--accent-purple);
+  background: var(--accent-orange);
 }
 
 /* Scrollbar styling */
@@ -144,7 +144,7 @@ body {
 
 /* Text gradient */
 .text-gradient {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -196,7 +196,7 @@ body {
 
 .typing-effect {
   overflow: hidden;
-  border-right: 2px solid var(--accent-blue);
+  border-right: 2px solid var(--accent-red);
   animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
 }
 
@@ -212,7 +212,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent-blue);
+  background: var(--accent-red);
   transition: width 0.3s ease;
 }
 
@@ -240,7 +240,7 @@ body {
 
 .back-to-top:hover {
   background: rgba(255, 42, 42, 0.2);
-  border-color: var(--accent-blue);
+  border-color: var(--accent-red);
   transform: translateY(-4px);
 }
 
@@ -265,16 +265,16 @@ body {
 }
 
 /* Terminal text colors */
-.text-neon-blue {
-  color: #ff2a2a;
+.text-neon-red {
+  color: #ff102a;
 }
 
 .text-neon-green {
   color: #39ff14;
 }
 
-.text-neon-purple {
-  color: #8b5cf6;
+.text-neon-orange {
+  color: #eb6a2e;
 }
 
 /* Custom scrollbar for terminal */

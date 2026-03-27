@@ -102,15 +102,15 @@ export default function ContributionGraph() {
             datasets: [{
               label: 'Contributions',
               data,
-              borderColor: '#57f0ff',
-              backgroundColor: 'rgba(87, 240, 255, 0.1)',
+              borderColor: '#ff102a',
+              backgroundColor: 'rgba(255, 16, 42, 0.1)',
               borderWidth: 2,
               fill: true,
               tension: 0.4,
-              pointBackgroundColor: '#57f0ff',
-              pointBorderColor: '#57f0ff',
+              pointBackgroundColor: '#ff102a',
+              pointBorderColor: '#ff102a',
               pointHoverBackgroundColor: '#fff',
-              pointHoverBorderColor: '#57f0ff',
+              pointHoverBorderColor: '#ff102a',
               pointRadius: 4,
               pointHoverRadius: 6,
             }]
@@ -195,12 +195,12 @@ export default function ContributionGraph() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6"
         >
           <div className="glass-card p-6 text-center">
-            <div className="text-3xl font-bold text-neon-blue mb-2">{totalContributions}</div>
+            <div className="text-3xl font-bold text-neon-red mb-2">{totalContributions}</div>
             <div className="text-gray-400 text-sm">Total Contributions</div>
           </div>
           <div className="glass-card p-6 text-center relative">
             <div className="absolute inset-0 border-l border-r border-white/10"></div>
-            <div className="text-3xl font-bold text-neon-purple mb-2">{currentStreak}</div>
+            <div className="text-3xl font-bold text-neon-orange mb-2">{currentStreak}</div>
             <div className="text-gray-400 text-sm flex items-center justify-center gap-2">
               <span>Current Streak</span>
               <span>🔥</span>
