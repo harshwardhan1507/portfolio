@@ -15,10 +15,11 @@
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-Live-00D9FF?style=for-the-badge&logoColor=white)](https://harshwardhanportfolio.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-harshwardhan1507-181717?style=for-the-badge&logo=github)](https://github.com/harshwardhan1507)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/harsh-wardhan-singh-cse)
-[![Email](https://img.shields.io/badge/Email-Reach_Out-EA4335?style=for-the-badge&logo=gmail)](mailto:harshwardhansingh1507@gmail.com)
+[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-Live-000000?style=for-the-badge&logoColor=white)](https://harshwardhanportfolio.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-harshwardhan1507-000000?style=for-the-badge&logo=github)](https://github.com/harshwardhan1507)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-000000?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/harsh-wardhan-singh-cse)
+[![Email](https://img.shields.io/badge/Email-Reach_Out-000000?style=for-the-badge&logo=gmail)](mailto:harshwardhansingh1507@gmail.com)
+[![Followers](https://img.shields.io/github/followers/harshwardhan1507?style=for-the-badge&color=000000&logo=github&labelColor=000000)](https://github.com/harshwardhan1507?tab=followers)
 
 <br/>
 
@@ -55,30 +56,30 @@ I don't just learn frameworks — I build with them. From shipping a full auth +
 
 ### Frontend
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/React-000000?style=flat-square&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-000000?style=flat-square&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=flat-square&logo=javascript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-000000?style=flat-square&logo=tailwindcss&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-000000?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-000000?style=flat-square&logo=css3&logoColor=white)
 
 ### Backend & Database
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-000000?style=flat-square&logo=nodedotjs&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-000000?style=flat-square&logo=supabase&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-000000?style=flat-square&logo=firebase&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-000000?style=flat-square&logo=mongodb&logoColor=white)
 
 ### Languages
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Java](https://img.shields.io/badge/Java-000000?style=flat-square&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-000000?style=flat-square&logo=python&logoColor=white)
+![C](https://img.shields.io/badge/C-000000?style=flat-square&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/C++-000000?style=flat-square&logo=cplusplus&logoColor=white)
 
 ### Tools & Deployment
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![Git](https://img.shields.io/badge/Git-000000?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-000000?style=flat-square&logo=visualstudiocode&logoColor=white)
 
 </div>
 
@@ -97,8 +98,8 @@ A personal AI memory system that captures, categorizes, and surfaces memories ac
 
 **Stack:** React · TypeScript · Supabase · Firebase Auth · Tailwind · Node.js
 
-[![Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/harshwardhan1507/verge)
-[![Live](https://img.shields.io/badge/Live-Demo-00D9FF?style=flat-square)](https://verge-eosin.vercel.app/)
+[![Repo](https://img.shields.io/badge/GitHub-Repo-000000?style=flat-square&logo=github)](https://github.com/harshwardhan1507/verge)
+[![Live](https://img.shields.io/badge/Live-Demo-000000?style=flat-square)](https://verge-eosin.vercel.app/)
 
 </td>
 <td width="50%">
@@ -110,8 +111,8 @@ Credit-weighted GPA computation engine with persistent data storage. Built for a
 
 **Stack:** JavaScript · HTML · CSS · Firebase
 
-[![Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/harshwardhan1507/SRM-cgpa-calculator)
-[![Live](https://img.shields.io/badge/Live-Demo-00D9FF?style=flat-square)](https://srm-cgpa-calculator-by-haruto.vercel.app/)
+[![Repo](https://img.shields.io/badge/GitHub-Repo-000000?style=flat-square&logo=github)](https://github.com/harshwardhan1507/SRM-cgpa-calculator)
+[![Live](https://img.shields.io/badge/Live-Demo-000000?style=flat-square)](https://srm-cgpa-calculator-by-haruto.vercel.app/)
 
 </td>
 </tr>
@@ -125,8 +126,8 @@ A responsive Pomodoro system with dynamic UI states, glassmorphism design, and a
 
 **Stack:** JavaScript · HTML · CSS
 
-[![Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/harshwardhan1507/12-days-12-projects/tree/master/focusX)
-[![Live](https://img.shields.io/badge/Live-Demo-00D9FF?style=flat-square)](https://focusxbyharuto.netlify.app/)
+[![Repo](https://img.shields.io/badge/GitHub-Repo-000000?style=flat-square&logo=github)](https://github.com/harshwardhan1507/12-days-12-projects/tree/master/focusX)
+[![Live](https://img.shields.io/badge/Live-Demo-000000?style=flat-square)](https://focusxbyharuto.netlify.app/)
 
 </td>
 <td width="50%">
@@ -138,8 +139,8 @@ Lightweight, instant temperature conversion between Celsius, Fahrenheit, and Kel
 
 **Stack:** JavaScript · HTML · CSS
 
-[![Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/harshwardhan1507/12-days-12-projects/tree/master/Tempify)
-[![Live](https://img.shields.io/badge/Live-Demo-00D9FF?style=flat-square)](https://tempifybyharuto.netlify.app/)
+[![Repo](https://img.shields.io/badge/GitHub-Repo-000000?style=flat-square&logo=github)](https://github.com/harshwardhan1507/12-days-12-projects/tree/master/Tempify)
+[![Live](https://img.shields.io/badge/Live-Demo-000000?style=flat-square)](https://tempifybyharuto.netlify.app/)
 
 </td>
 </tr>
@@ -151,12 +152,12 @@ Lightweight, instant temperature conversion between Celsius, Fahrenheit, and Kel
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=harshwardhan1507&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=00D9FF&text_color=FFFFFF" width="48%" />
-<img src="https://github-readme-streak-stats.herokuapp.com?user=harshwardhan1507&theme=tokyonight&hide_border=true&background=0D1117&ring=00D9FF&fire=FF6B35&currStreakLabel=00D9FF" width="48%" />
+<img src="https://github-readme-stats.vercel.app/api?username=harshwardhan1507&show_icons=true&hide_border=true&bg_color=000000&title_color=FFFFFF&icon_color=FFFFFF&text_color=FFFFFF" width="48%" />
+<img src="https://github-readme-streak-stats.herokuapp.com?user=harshwardhan1507&hide_border=true&background=000000&ring=FFFFFF&fire=FFFFFF&currStreakLabel=FFFFFF&currStreakNum=FFFFFF&sideNums=FFFFFF&sideLabels=FFFFFF&dates=FFFFFF" width="48%" />
 
 <br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harshwardhan1507&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&text_color=FFFFFF" width="40%" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harshwardhan1507&layout=compact&hide_border=true&bg_color=000000&title_color=FFFFFF&text_color=FFFFFF" width="40%" />
 
 </div>
 
@@ -164,9 +165,16 @@ Lightweight, instant temperature conversion between Celsius, Fahrenheit, and Kel
 
 ## 🏗️ Portfolio Architecture
 
-```
+```text
 portfolio/
 ├── app/                    # Next.js App Router
+│   ├── components/         # Reusable dynamic UI components
+│   │   ├── Hero.tsx        # Animated hero section
+│   │   ├── GitHubStats.tsx # Live GitHub profile metrics
+│   │   ├── RepoList.tsx    # Live repositories fetching
+│   │   ├── Terminal.tsx    # Interactive terminal UI
+│   │   ├── MagicBento.jsx  # Complex bento box layout
+│   │   └── ...             # Other modular components
 │   ├── layout.tsx          # Root layout + metadata
 │   └── page.tsx            # Main portfolio page
 ├── lib/                    # Utilities & API integrations
@@ -180,7 +188,7 @@ portfolio/
 └── tailwind.config.js      # Tailwind CSS config
 ```
 
-**Built with:** Next.js (SSR) · React · TypeScript · Tailwind CSS  
+**Built with:** Next.js (SSR) · React · TypeScript · Tailwind CSS · Framer Motion
 **Deployed on:** Vercel (CI/CD pipeline)  
 **Live GitHub metrics** fetched at runtime via GitHub API
 
@@ -224,6 +232,7 @@ npm run dev
 - [x] Build & deploy personal portfolio
 - [x] Ship MemoryOS at hackathon (36 hrs)
 - [x] Master React + TypeScript + Tailwind
+- [x] Integrate live GitHub stats & Animated UI Components
 - [ ] Land first dev internship by 2nd year
 - [ ] Reach 50+ LeetCode problems (Java DSA)
 - [ ] Build a SaaS side project
@@ -239,8 +248,8 @@ I usually reply within 24 hours.
 
 <br/>
 
-[![Email](https://img.shields.io/badge/harshwardhansingh1507@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshwardhansingh1507@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/harsh--wardhan--singh--cse-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/harsh-wardhan-singh-cse)
+[![Email](https://img.shields.io/badge/harshwardhansingh1507@gmail.com-000000?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshwardhansingh1507@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/harsh--wardhan--singh--cse-000000?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/harsh-wardhan-singh-cse)
 [![Portfolio](https://img.shields.io/badge/harshwardhanportfolio.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://harshwardhanportfolio.vercel.app/)
 
 <br/>
@@ -253,6 +262,6 @@ I usually reply within 24 hours.
 <div align="center">
 Built with 💚 by **Harsh Wardhan** · © 2026
 
-![](https://komarev.com/ghpvc/?username=harshwardhan1507&color=3fb950&style=flat-square&label=REPO+VIEWS)
+![](https://komarev.com/ghpvc/?username=harshwardhan1507&color=000000&style=flat-square&label=REPO+VIEWS)
 
 </div>
