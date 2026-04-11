@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-interface GitHubUser {
-  public_repos: number;
-  public_gists: number;
+interface GitHubStatsData {
+  publicRepos: number;
+  publicGists: number;
   followers: number;
   following: number;
+  totalStars: number;
+  totalForks: number;
 }
 
 interface StatCardProps {
@@ -37,27 +39,26 @@ function StatCard({ icon, value, label, delay }: StatCardProps) {
 }
 
 export default function GitHubStats() {
-  const [user, setUser] = useState<GitHubUser | null>(null);
+  const [statsData, setStatsData] = useState<GitHubStatsData | null>(null);
   const [loading, setLoading] = useState(true);
-  const username = 'harshwardhan1507';
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/${username}`)
+    fetch('/api/github/stats')
       .then((res) => res.json())
       .then((data) => {
-        setUser(data);
+        setStatsData(data);
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, [username]);
+  }, []);
 
   const stats = [
-    { key: 'repos', label: 'Public Repos', value: user?.public_repos ?? '--' },
-    { key: 'stars', label: 'Total Stars', value: '--' },
-    { key: 'forks', label: 'Total Forks', value: '--' },
-    { key: 'followers', label: 'Followers', value: user?.followers ?? '--' },
-    { key: 'following', label: 'Following', value: user?.following ?? '--' },
-    { key: 'gists', label: 'Public Gists', value: user?.public_gists ?? '--' },
+    { key: 'repos', label: 'Public Repos', value: statsData?.publicRepos ?? '--' },
+    { key: 'stars', label: 'Total Stars', value: statsData?.totalStars ?? '--' },
+    { key: 'forks', label: 'Total Forks', value: statsData?.totalForks ?? '--' },
+    { key: 'followers', label: 'Followers', value: statsData?.followers ?? '--' },
+    { key: 'following', label: 'Following', value: statsData?.following ?? '--' },
+    { key: 'gists', label: 'Public Gists', value: statsData?.publicGists ?? '--' },
   ];
 
   const icons = [

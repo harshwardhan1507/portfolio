@@ -6,12 +6,16 @@ import { Chart, registerables } from 'chart.js';
 
 Chart.register(...registerables);
 
-interface GitHubEvent {
-  created_at: string;
-  type: string;
+interface ContributionDay {
+  date: string;
+  contributionCount: number;
+  color: string;
 }
 
-const username = 'harshwardhan1507';
+interface ContributionsData {
+  totalContributions: number;
+  weeks: ContributionDay[][];
+}
 
 export default function ContributionGraph() {
   const chartRef = useRef<HTMLCanvasElement>(null);
@@ -23,50 +27,46 @@ export default function ContributionGraph() {
   useEffect(() => {
     if (!chartRef.current) return;
 
-    // Fetch user's public events to calculate contributions
-    fetch(`https://api.github.com/users/${username}/events?per_page=100`)
+    fetch('/api/github/contributions')
       .then((res) => res.json())
-      .then((events: GitHubEvent[]) => {
-        // Calculate contributions from the last 30 days
+      .then((data: ContributionsData) => {
+        const allDays: ContributionDay[] = data.weeks.flat();
+
         const thirtyDaysAgo = new Date();
         thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-        
-        const recentEvents = events.filter((event) => {
-          const eventDate = new Date(event.created_at);
-          return eventDate >= thirtyDaysAgo;
+        thirtyDaysAgo.setHours(0, 0, 0, 0);
+
+        const last30Days = allDays.filter((day) => {
+          const dayDate = new Date(day.date);
+          return dayDate >= thirtyDaysAgo;
         });
 
-        // Group events by date
-        const eventsByDate: Record<string, number> = {};
-        recentEvents.forEach((event) => {
-          const date = new Date(event.created_at).toISOString().split('T')[0];
-          eventsByDate[date] = (eventsByDate[date] || 0) + 1;
-        });
-
-        // Generate labels for last 30 days
         const labels = Array.from({ length: 30 }, (_, i) => {
           const date = new Date();
           date.setDate(date.getDate() - (29 - i));
           return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         });
 
-        // Map events to data (default to 0 if no events)
-        const data = labels.map((_, i) => {
+        const eventsByDate: Record<string, number> = {};
+        last30Days.forEach((day) => {
+          eventsByDate[day.date] = day.contributionCount;
+        });
+
+        const chartData = labels.map((_, i) => {
           const date = new Date();
           date.setDate(date.getDate() - (29 - i));
           const dateStr = date.toISOString().split('T')[0];
           return eventsByDate[dateStr] || 0;
         });
 
-        setTotalContributions(recentEvents.length);
+        setTotalContributions(data.totalContributions);
 
-        // Calculate current streak
         let streak = 0;
         for (let i = 29; i >= 0; i--) {
           const date = new Date();
           date.setDate(date.getDate() - i);
           const dateStr = date.toISOString().split('T')[0];
-          if (eventsByDate[dateStr]) {
+          if (eventsByDate[dateStr] > 0) {
             streak++;
           } else if (i < 29) {
             break;
@@ -74,18 +74,17 @@ export default function ContributionGraph() {
         }
         setCurrentStreak(streak);
 
-        // Calculate longest streak
+        const sortedDates = Object.keys(eventsByDate).filter(d => eventsByDate[d] > 0).sort();
         let maxStreak = 0;
         let currentRun = 0;
-        Object.keys(eventsByDate).sort().forEach((date) => {
-          const prevDate = new Date(currentRun > 0 ? Object.keys(eventsByDate).sort()[Object.keys(eventsByDate).sort().indexOf(date) - 1] : date);
-          const thisDate = new Date(date);
-          const diffDays = Math.floor((thisDate.getTime() - prevDate.getTime()) / (1000 * 60 * 60 * 24));
-          
-          if (diffDays <= 1 && currentRun > 0) {
-            currentRun++;
-          } else {
+        sortedDates.forEach((date, idx) => {
+          if (idx === 0) {
             currentRun = 1;
+          } else {
+            const prevDate = new Date(sortedDates[idx - 1]);
+            const thisDate = new Date(date);
+            const diffDays = Math.floor((thisDate.getTime() - prevDate.getTime()) / (1000 * 60 * 60 * 24));
+            currentRun = diffDays <= 1 ? currentRun + 1 : 1;
           }
           maxStreak = Math.max(maxStreak, currentRun);
         });
@@ -101,7 +100,7 @@ export default function ContributionGraph() {
             labels,
             datasets: [{
               label: 'Contributions',
-              data,
+              data: chartData,
               borderColor: '#ff102a',
               backgroundColor: 'rgba(255, 16, 42, 0.1)',
               borderWidth: 2,
@@ -157,7 +156,6 @@ export default function ContributionGraph() {
         });
       })
       .catch(() => {
-        // Keep default values on error
       });
 
     return () => {
