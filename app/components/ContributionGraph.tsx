@@ -61,14 +61,19 @@ export default function ContributionGraph() {
 
         setTotalContributions(data.totalContributions);
 
+        // ✅ Correct current streak — count backwards from today
         let streak = 0;
-        for (let i = 29; i >= 0; i--) {
+        for (let i = 0; i <= 29; i++) {
           const date = new Date();
           date.setDate(date.getDate() - i);
           const dateStr = date.toISOString().split('T')[0];
+
           if (eventsByDate[dateStr] > 0) {
             streak++;
-          } else if (i < 29) {
+          } else {
+            // If today (i=0) has no contributions, check if yesterday does
+            // (handles the case where today hasn't ended yet)
+            if (i === 0) continue;
             break;
           }
         }
@@ -178,7 +183,7 @@ export default function ContributionGraph() {
             Harsh Wardhan's Contribution Graph
           </h2>
           <p className="text-gray-400 mb-6">Last 30 days activity</p>
-          
+
           <div className="h-64">
             <canvas ref={chartRef}></canvas>
           </div>
