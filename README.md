@@ -1,5 +1,3 @@
-
-
 <div align="center">
 
 ```
@@ -18,6 +16,7 @@
 [![Portfolio](https://img.shields.io/badge/🌐_Portfolio-Live-000000?style=for-the-badge&logoColor=white)](https://harshwardhanportfolio.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-harshwardhan1507-000000?style=for-the-badge&logo=github)](https://github.com/harshwardhan1507)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-000000?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/harsh-wardhan-singh-cse)
+[![LeetCode](https://img.shields.io/badge/LeetCode-Haruto__Okura-000000?style=for-the-badge&logo=leetcode)](https://leetcode.com/u/Haruto_Okura/)
 [![Email](https://img.shields.io/badge/Email-Reach_Out-000000?style=for-the-badge&logo=gmail)](mailto:harshwardhansingh1507@gmail.com)
 [![Followers](https://img.shields.io/github/followers/harshwardhan1507?style=for-the-badge&color=000000&logo=github&labelColor=000000)](https://github.com/harshwardhan1507?tab=followers)
 
@@ -35,18 +34,19 @@
 
 ```bash
 $ whoami
-> Harsh Wardhan — 1st year B.Tech CS @ SRM University
+> Harsh Wardhan — 1st year B.Tech CS @ SRM University, Haryana
 > Full-Stack Developer | AI Enthusiast | Shipping things that work
 
 $ cat ./highlights.sh
-🎓  B.Tech Computer Science — SRM University, India
-⚡  Built MemoryOS (AI second brain) in 36 hours at a hackathon
+🎓  B.Tech Computer Science — SRM University, Haryana (2025–2029)
+🏗️  Currently building Vertex — a full-stack campus event platform for SRM Haryana
+⚡  Built MemoryOS (AI second brain) in 36 hours at SRM Builds 7.0
 🌐  Full-Stack: React · Next.js · Node.js · Supabase · Firebase
 📈  Currently leveling up: DSA in Java + Backend Systems
-🎯  Goal: Land a dev internship by 2nd year
+🎯  Goal: Land a dev internship before 2nd year
 ```
 
-I don't just learn frameworks — I build with them. From shipping a full auth + vector database stack in a 36-hour hackathon to tools actively used by my college peers, I focus on real-world output over theoretical fluff.
+I don't just learn frameworks — I build with them. From shipping a full auth + vector database stack in a 36-hour hackathon to building a live campus platform used by real students at SRM Haryana, I focus on real-world output over theoretical fluff.
 
 ---
 
@@ -60,6 +60,7 @@ I don't just learn frameworks — I build with them. From shipping a full auth +
 ![TypeScript](https://img.shields.io/badge/TypeScript-000000?style=flat-square&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=flat-square&logo=javascript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-000000?style=flat-square&logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-000000?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-000000?style=flat-square&logo=css3&logoColor=white)
 
@@ -87,6 +88,24 @@ I don't just learn frameworks — I build with them. From shipping a full auth +
 
 ## 🚀 Featured Projects
 
+### 🏗️ Vertex — Campus Event & Club Platform *(Flagship)*
+> *The operating system for campus life at SRM Haryana*
+
+A full-stack campus event management platform built for SRM University, Haryana. Vertex brings event discovery, club management, real-time push notifications, and student engagement into one unified product. Currently in **active development** — Phase 8 (ClubHub + PulseAlert).
+
+**What it does:**
+- 📅 **EventHub** — Browse, register, and manage campus events
+- 🏛️ **ClubHub** — Full club profiles, member management, and announcements
+- 🔔 **PulseAlert** — Firebase Cloud Messaging push notifications for real-time updates
+- 🔐 Supabase Auth with Row Level Security (RLS) for role-based access
+
+**Stack:** Next.js 14 · TypeScript · Supabase · Firebase (FCM) · Tailwind CSS · shadcn/ui
+
+[![Repo](https://img.shields.io/badge/GitHub-Repo-000000?style=for-the-badge&logo=github)](https://github.com/harshwardhan1507/vertex)
+> 🔨 *In active development — Phase 8 of 12*
+
+---
+
 <table>
 <tr>
 <td width="50%">
@@ -94,9 +113,9 @@ I don't just learn frameworks — I build with them. From shipping a full auth +
 ### 🧠 MemoryOS
 > *AI Second Brain — built in 36 hours*
 
-A personal AI memory system that captures, categorizes, and surfaces memories across **7 semantic dimensions**. Full auth + database stack. Real-time vector search.
+A personal AI memory system that captures, categorizes, and surfaces memories across **7 semantic dimensions**. Full auth + database stack. Real-time vector search. Built at **SRM Builds 7.0** hackathon.
 
-**Stack:** React · TypeScript · Supabase · Firebase Auth · Tailwind · Node.js
+**Stack:** React · TypeScript · Supabase · Firebase Auth · Tailwind · Groq/LLaMA · Claude API
 
 [![Repo](https://img.shields.io/badge/GitHub-Repo-000000?style=flat-square&logo=github)](https://github.com/harshwardhan1507/verge)
 [![Live](https://img.shields.io/badge/Live-Demo-000000?style=flat-square)](https://verge-eosin.vercel.app/)
@@ -188,7 +207,7 @@ portfolio/
 └── tailwind.config.js      # Tailwind CSS config
 ```
 
-**Built with:** Next.js (SSR) · React · TypeScript · Tailwind CSS · Framer Motion
+**Built with:** Next.js (SSR) · React · TypeScript · Tailwind CSS · Framer Motion  
 **Deployed on:** Vercel (CI/CD pipeline)  
 **Live GitHub metrics** fetched at runtime via GitHub API
 
@@ -218,10 +237,11 @@ npm run dev
 ## 📈 Current Focus
 
 ```
-[████████░░]  80%  →  React / Next.js (Production projects)
-[███████░░░]  70%  →  DSA in Java (Placement prep)
-[██████░░░░]  60%  →  Backend with Node.js + Supabase
-[████░░░░░░]  40%  →  Spring Boot (Target: Campus placements)
+[█████████░]  90%  →  Next.js 14 + TypeScript (Vertex — production build)
+[████████░░]  80%  →  Supabase + Firebase (Backend architecture)
+[███████░░░]  70%  →  React ecosystem (Production projects)
+[██████░░░░]  60%  →  DSA in Java (Placement prep · LeetCode: Haruto_Okura)
+[████░░░░░░]  40%  →  Backend systems with Node.js
 [██░░░░░░░░]  20%  →  System Design fundamentals
 ```
 
@@ -230,12 +250,26 @@ npm run dev
 ## 🎯 2025–26 Roadmap
 
 - [x] Build & deploy personal portfolio
-- [x] Ship MemoryOS at hackathon (36 hrs)
+- [x] Ship MemoryOS at hackathon (36 hrs) — SRM Builds 7.0
 - [x] Master React + TypeScript + Tailwind
-- [x] Integrate live GitHub stats & Animated UI Components
-- [ ] Land first dev internship by 2nd year
+- [x] Integrate live GitHub stats & animated UI components
+- [x] Start building Vertex — campus event platform for SRM Haryana
+- [ ] Ship Vertex v1.0 (all 4 phases complete)
+- [ ] Land first dev internship before 2nd year
 - [ ] Reach 50+ LeetCode problems (Java DSA)
 - [ ] Build a SaaS side project
+
+---
+
+## 🏆 Achievements
+
+| Achievement | Details |
+|---|---|
+| 🥇 SRM Builds 7.0 | Built MemoryOS (AI second brain) in 36 hours |
+| 🏆 SIH 2024 | Smart India Hackathon Qualifier |
+| 🎖️ NDA / SSB | Cleared NDA written + SSB screening |
+| ⚖️ CLAT 2024 | Cleared national law entrance exam |
+| 🃏 Memocracy | Wildcard entry |
 
 ---
 
@@ -251,6 +285,7 @@ I usually reply within 24 hours.
 [![Email](https://img.shields.io/badge/harshwardhansingh1507@gmail.com-000000?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshwardhansingh1507@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/harsh--wardhan--singh--cse-000000?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/harsh-wardhan-singh-cse)
 [![Portfolio](https://img.shields.io/badge/harshwardhanportfolio.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://harshwardhanportfolio.vercel.app/)
+[![LeetCode](https://img.shields.io/badge/Haruto__Okura-000000?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/Haruto_Okura/)
 
 <br/>
 <br/>
@@ -260,7 +295,7 @@ I usually reply within 24 hours.
 <sub>© 2026 Harsh Wardhan · Built with ❤️ and too much coffee · Deployed on Vercel</sub>
 
 <div align="center">
-Built with 💚 by **Harsh Wardhan** · © 2026
+Built with 💚 by <strong>Harsh Wardhan</strong> · © 2026
 
 ![](https://komarev.com/ghpvc/?username=harshwardhan1507&color=000000&style=flat-square&label=REPO+VIEWS)
 
