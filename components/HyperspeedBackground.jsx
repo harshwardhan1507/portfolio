@@ -444,6 +444,11 @@ const Hyperspeed = ({ effectOptions = DEFAULT_EFFECT_OPTIONS }) => {
       }
 
       initPasses() {
+        if (!this.composer || typeof this.composer.addPass !== 'function') {
+          console.warn('Composer is not properly initialized, skipping passes initialization');
+          return;
+        }
+
         this.renderPass = new RenderPass(this.scene, this.camera);
         this.bloomPass = new EffectPass(
           this.camera,
@@ -585,7 +590,9 @@ const Hyperspeed = ({ effectOptions = DEFAULT_EFFECT_OPTIONS }) => {
       }
 
       render(delta) {
-        this.composer.render(delta);
+        if (this.composer) {
+          this.composer.render(delta);
+        }
       }
 
       dispose() {
@@ -618,6 +625,7 @@ const Hyperspeed = ({ effectOptions = DEFAULT_EFFECT_OPTIONS }) => {
         }
         if (this.composer) {
           this.composer.dispose();
+          this.composer = null;
         }
 
         window.removeEventListener('resize', this.onWindowResize);

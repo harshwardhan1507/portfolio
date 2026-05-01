@@ -47,8 +47,9 @@ export default function ContributionGraph() {
           return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         });
 
+        // Build events map from ALL available days (for accurate streak calculation)
         const eventsByDate: Record<string, number> = {};
-        last30Days.forEach((day) => {
+        allDays.forEach((day) => {
           eventsByDate[day.date] = day.contributionCount;
         });
 
@@ -61,39 +62,49 @@ export default function ContributionGraph() {
 
         setTotalContributions(data.totalContributions);
 
-        // ✅ Correct current streak — count backwards from today
+        // Calculate current streak - count consecutive days backwards from today
         let streak = 0;
-        for (let i = 0; i <= 29; i++) {
+        let startedCounting = false;
+        
+        // Check up to 365 days back to find the full streak
+        for (let i = 0; i < 365; i++) {
           const date = new Date();
           date.setDate(date.getDate() - i);
           const dateStr = date.toISOString().split('T')[0];
 
           if (eventsByDate[dateStr] > 0) {
             streak++;
-          } else {
-            // If today (i=0) has no contributions, check if yesterday does
-            // (handles the case where today hasn't ended yet)
-            if (i === 0) continue;
+            startedCounting = true;
+          } else if (startedCounting) {
+            // Once we started counting and hit a day with no contributions, stop
             break;
           }
+          // If today (i=0) has no contributions, keep checking backwards
+          // without incrementing the streak until we find contributions
         }
         setCurrentStreak(streak);
 
-        const sortedDates = Object.keys(eventsByDate).filter(d => eventsByDate[d] > 0).sort();
+        // Calculate longest streak from all available data
+        // Get only dates with contributions, sorted chronologically
+        const contributionDates = Object.keys(eventsByDate)
+          .filter(date => eventsByDate[date] > 0)
+          .sort();
+        
         let maxStreak = 0;
         let currentRun = 0;
-        sortedDates.forEach((date, idx) => {
-          if (idx === 0) {
+        
+        for (let i = 0; i < contributionDates.length; i++) {
+          if (i === 0) {
             currentRun = 1;
           } else {
-            const prevDate = new Date(sortedDates[idx - 1]);
-            const thisDate = new Date(date);
+            const prevDate = new Date(contributionDates[i - 1]);
+            const thisDate = new Date(contributionDates[i]);
             const diffDays = Math.floor((thisDate.getTime() - prevDate.getTime()) / (1000 * 60 * 60 * 24));
-            currentRun = diffDays <= 1 ? currentRun + 1 : 1;
+            currentRun = diffDays === 1 ? currentRun + 1 : 1;
           }
           maxStreak = Math.max(maxStreak, currentRun);
-        });
-        setLongestStreak(maxStreak || streak);
+        }
+        setLongestStreak(maxStreak);
 
         if (chartInstance.current) {
           chartInstance.current.destroy();
