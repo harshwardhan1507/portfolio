@@ -5,6 +5,14 @@ import Terminal from './Terminal';
 
 const projects = [
   {
+    name: 'Vertex - Campus Operating System',
+    description: 'Vertex is a campus event management platform built for Indian college students, club leads, and administration. It eliminates the chaos of WhatsApp groups, manual certificates, and paper attendance by bringing everything into one unified system.',
+    tech: ['React', 'TypeScript', 'Supabase', 'Firebase Auth', 'Node.js', 'Tailwind'],
+    github: 'https://github.com/harshwardhan1507/vertex-showcase',
+    live: 'https://vertexcampusos.vercel.app/',
+    image: '/images/vertex.png',
+  },
+  {
     name: 'SRM CGPA Calculator',
     description: 'An SRM grading-system-based CGPA calculator that allows students to input course credits and grades to compute semester GPA and cumulative CGPA instantly, ensuring accuracy and ease of use.',
     tech: ['HTML', 'CSS', 'JavaScript','Firebase'],
